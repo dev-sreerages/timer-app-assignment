@@ -14,7 +14,7 @@ interface TimerItemProps {
 }
 
 export const TimerItem: React.FC<TimerItemProps> = ({ timer }) => {
-  const { toggleTimer, deleteTimer, updateTimer, restartTimer, updateStatus } =
+  const { toggleTimer, deleteTimer, updateTimer, restartTimer } =
     useTimerStore();
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const intervalRef = useRef<number | null>(null);

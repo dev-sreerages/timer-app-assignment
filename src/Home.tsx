@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Plus, Clock, Trash2 } from "lucide-react";
 import { TimerList } from "./components/TimerList";
 import { Toaster } from "sonner";
@@ -9,9 +9,23 @@ function Home() {
   const { resetTimerState } = useTimerStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <Toaster position="top-right" />
+      <Toaster position={isMobile ? "bottom-center" : "top-right"} />
       <div className="container mx-auto px-4 py-8">
         <div className="flex justify-between mb-5">
           <div className="flex items-center gap-3">
