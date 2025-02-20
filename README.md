@@ -1,3 +1,20 @@
+1. Run <code>npm install</code> command (Dependency Added - <code>redux-persist</code>)
+2. Run the project using <code>npm run dev</code>
+
+## Changes
+- Added simultaneous timers and improve snack bar behavior
+- Implemented support for multiple simultaneous timers  
+- Fixed snack bar console error  
+- Extracted common components for better reusability  
+- Consolidated modal-related code for cleaner structure  
+- Added validation messages via snack bars  
+- Improved responsive snack bar placement  
+- Ensured timer persistence across sessions  
+
+## Additional Changes
+- Added a reset button for resetting the states in redux
+
+
 # Timer App Assignment
 
 Welcome to the Timer App Assignment! This project is designed to evaluate your skills in React development, focusing on **UI implementation**, **code quality**, **state management**, and **best practices**. The project uses **React**, **Vite**, **Tailwind CSS**, and **Vitest** for testing.
