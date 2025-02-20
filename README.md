@@ -13,7 +13,7 @@
 
 ## Additional Changes
 - Added a reset button for resetting the states in redux
-
+---
 
 # Timer App Assignment
 
